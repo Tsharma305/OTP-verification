@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Verification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="wlcome-container" id="ft-pg-sec">
+            <h1>WELCOME!</h1>
+            <img src="./Images/birthday-1670415_640.png" alt="Image" class="first-img">
+            <button id="start-btn">Get Started &#8594</button>
+
+        </div>
+
+
+
+        <div class="verifcation-container" id="sec-pg-sec">
+            <img src="./Images/Mail+communication.png" alt="Image" class="second-img">
+            <div class="ver-txt">
+                <h3 class="verifi-txt">Verify Your Number</h3>
+                <p>Please enter your phone number <br> to receive a verification code </p>
+            </div>
+            <div class="phone-sec">
+                <div class="input-number">
+                    <div class="phone-symbol"><i class="fa fa-phone" style="font-size:23px"></i></div>
+                    <form>
+                        <label for="phone" style="font-size: 10px">Phone Number</label>
+                        <input type="tel" name="phone" id="phone-number">
+                    </form>
+                </div>
+                <div id="error-1">Please enter a valid phone number</div>
+                <button id="continue-btn">Continue</button>
+
+            </div>
+        </div>
+
+
+
+        <div class="otp-container" id="th-pg-sec">
+            <img src="./Images/mail.png" alt="image" class="third-img">
+            <div class="ver-code-txt">
+                <h3 class="cd-txt">Verification Code</h3>
+                <p>Please enter code sent to <br> <span id="get-num">number</span></p>
+            </div>
+            <div class="otp-get">
+                <input type="text" maxlength="5" class="get-otp" name="number" id="num1">
+                <!-- <input type="text" maxlength="1" class="get-otp" name="number" id="num2">
+                <input type="text" maxlength="1" class="get-otp" name="number" id="num3">
+                <input type="text" maxlength="1" class="get-otp" name="number" id="num4">
+                <input type="text" maxlength="1" class="get-otp" name="number" id="num5"> -->
+
+            </div>
+            <div class="verify-sec">
+                <button id="verify-btn">Verify Code</button>
+                <span id="resend">Resend Code</span>
+            </div>
+        </div>
+
+
+        <div class="login-container" id="fr-pg-sec">
+            <i class="fa fa-check-circle" style="font-size:70px"></i>
+            <h5>Your account has been
+                verified successfully
+            </h5>
+            <p>Please wait while redirecting</p>
+        </div>
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./app.js"></script>
+    <script>
+        $('input').keypress(function () {
+            $(this).next('input').focus();
+        });
+    </script>
+</body>
+
+</html>
